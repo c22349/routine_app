@@ -11,12 +11,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ThemeMode mode = ThemeMode.system;
     return MaterialApp(
       title: AppConstants.appName, //デスクトップアプリケーション時のタイトル
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: AppConstants.seedColor),
       ),
       darkTheme: ThemeData.dark(),
+      themeMode: mode,
       home: const ListPage(title: AppConstants.appName),
     );
   }
